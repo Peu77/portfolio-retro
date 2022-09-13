@@ -15,6 +15,7 @@
   "dependencies": {
     "sass": "^1.54.8",
     "three": "^0.144.0"
+
   },
   "staticFiles": {
     "staticPath": ["src/scripts/models"]
