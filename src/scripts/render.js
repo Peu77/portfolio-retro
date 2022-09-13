@@ -75,7 +75,6 @@ document.body.onscroll = () => {
     title.style = `transform: scale(${scale})`
     down.style = `transform: scale(${scale * 1.2})`
     down.style = `transform: scale(${scale})`
-    console.log(title.style.transform)
 }
 
 function animate() {
