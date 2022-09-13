@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.scss">
+    <title>Portfolio</title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<header>
+    <nav class="nav">
+        <p id="text"></p>
+    </nav>
+
+    <div class="title">
+        <h1>I'am Emil</h1>
+        <h2>A <span class="linear-wipe">developer</span></h2>
+    </div>
+</header>
+<a href="#info">
+    <img id="down"
+         src="data:image/png;base64,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"/>
+</a>
+
+<section id="info" class="container">
+    <div class="list">
+        <div class="card left-card">
+            <h1>ABOUT</h1>
+            <p>
+                I started programming 5 years ago, back then I just wanted to
+                be able to write plugins for a block game, back then I could never
+                have imagined that in the next few years I would be dealing with
+                software, web and game development
+            </p>
+        </div>
+
+        <div class="card right-card">
+            <h1>Experience</h1>
+            <p>
+                I have been working as a freelancer for 2 years now, at the same time I also work on my private projects
+                for
+                practice purposes.
+                My advantage is, I am very quickly interested in new things, so I quickly start a new project, so in the
+                years I have accumulated a lot of projects and experience.
+            </p>
+        </div>
+    </div>
+
+
+    <a href="https://github.com/peu77">Github</a>
+    <a href="mailto:emilebert@icloud.com">Email</a>
+</section>
+
+<script src="scripts/app.js" type="module"/>
+</body>
+</html>

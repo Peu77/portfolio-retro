@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+header {
+  .nav {
+    background-color: red;
+    padding: 20px;
+  }
+
+  .title {
+    margin-top: clamp(20px, 30vh, 600px);
+    margin-left: clamp(2px, 10%, 200px);
+    margin-bottom: calc(100vh - 150px);
+  }
+}
+
+#down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    filter: opacity(0.5);
+  }
+}
+
+.container {
+  padding: 20px;
+  width: 100%;
+}
+
+.card {
+  word-break: break-word;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+  padding: 10px
+}
+
+.card-container {
+  margin-left: 70px;
+}
+
+.card-container {
+  float: right;
+  margin-right: 70px;
+}
+
+#info {
+  padding-top: 30px;
+  padding-bottom: 30vh;
+  background-color: rgba(23, 23, 23, 0.85);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+
+  .list {
+
+    .card {
+      background-color: blue;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 20px;
+      text-align: left;
+    }
+  }
+}
+
+canvas {
+  border: red 2px solid;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.linear-wipe {
+  text-align: center;
+
+  background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 1s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
