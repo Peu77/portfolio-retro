@@ -73,8 +73,7 @@ document.body.onscroll = () => {
     i = document.body.getBoundingClientRect().top / 200
     const scale = Math.max(Math.abs(i), 1)
     title.style = `transform: scale(${scale})`
-    down.style = `transform: scale(${scale * 1.2})`
-    down.style = `transform: scale(${scale})`
+    down.style = `transform: translateX(-50%) scale(${scale / 2})`
 }
 
 function animate() {
